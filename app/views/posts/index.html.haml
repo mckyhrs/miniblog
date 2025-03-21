@@ -1,0 +1,11 @@
+.container.mt-4
+  .row.justify-content-center
+    .col-md-8
+      = link_to "投稿する", new_post_path, class: "btn btn-primary mb-4"
+
+      - @posts.each do |post|
+        .card.mb-4.shadow-sm
+          .card-header.text-muted
+            = post.created_at.strftime("%Y/%m/%d %H:%M")
+          .card-body
+            = simple_format(post.content, {class: "card-text"})
