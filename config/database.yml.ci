@@ -1,0 +1,9 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: miniblog_test
+  username: miniblog
+  password:
+  host: 127.0.0.1
+  port: 5432
+  pool: 5
