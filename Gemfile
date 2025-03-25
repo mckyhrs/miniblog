@@ -42,7 +42,7 @@ gem 'thruster', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'haml-rails', '~> 2.0'
+gem 'haml-rails'
 
 gem 'simple_form'
 
@@ -57,7 +57,7 @@ group :development, :test do
   gem 'rubocop-rails-omakase', require: false
 
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 7.0.0'
+  gem 'rspec-rails'
 
   gem 'haml_lint'
   gem 'sgcop', github: 'SonicGarden/sgcop', branch: 'main'
