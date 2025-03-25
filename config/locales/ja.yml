@@ -1,4 +1,10 @@
 ja:
+  date:
+    formats:
+      default: '%Y/%m/%d'
+  time:
+    formats:
+      default: '%Y/%m/%d %H:%M'
   error_occurred: "エラーが発生しました"
   activerecord:
     attributes:

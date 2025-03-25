@@ -9,6 +9,6 @@
       - @posts.each do |post|
         .card.mb-4.shadow-sm
           .card-header.text-muted
-            = post.created_at.strftime("%Y/%m/%d %H:%M")
+            = l post.created_at
           .card-body
             = simple_format(post.content, {class: "card-text"})
