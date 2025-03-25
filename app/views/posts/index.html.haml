@@ -4,11 +4,11 @@
       - if flash[:notice]
         .alert.alert-success= flash[:notice]
 
-      = link_to t("posts.new_post"), new_post_path, class: "btn btn-primary mb-4"
+      = link_to t('posts.new_post'), new_post_path, class: 'btn btn-primary mb-4'
 
       - @posts.each do |post|
         .card.mb-4.shadow-sm
           .card-header.text-muted
             = l post.created_at
           .card-body
-            = simple_format(post.content, {class: "card-text"})
+            = simple_format(h(post.content), { class: 'card-text' })
