@@ -5,7 +5,8 @@ ja:
   time:
     formats:
       default: '%Y/%m/%d %H:%M'
-  error_occurred: "エラーが発生しました"
+  general:
+    error_occurred: "エラーが発生しました"
   activerecord:
     attributes:
       post:

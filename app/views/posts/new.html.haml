@@ -3,7 +3,7 @@
     .col-md-8
       - if @post.errors.any?
         .alert.alert-danger
-          %p= t('error_occurred')
+          %p= t('general.error_occurred')
           %ul
             - @post.errors.full_messages.each do |message|
               %li= message
