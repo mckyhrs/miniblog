@@ -6,15 +6,17 @@ RSpec.describe 'Posts', type: :system do
   end
 
   describe 'タイムライン' do
-    let!(:post1) { Post.create!(content: '投稿1', created_at: 2.days.ago) }
-    let!(:post2) { Post.create!(content: '投稿2', created_at: 1.day.ago) }
+    before do
+      Post.create!(content: '投稿1', created_at: '2025-01-01 09:00'.in_time_zone)
+      Post.create!(content: '投稿2', created_at: '2025-01-02 09:00'.in_time_zone)
+    end
 
     it '投稿が一覧表示される' do
       visit posts_path
-      expect(page).to have_content(I18n.l(post1.created_at))
-      expect(page).to have_content(I18n.l(post2.created_at))
-      expect(page).to have_content('投稿2')
+      expect(page).to have_content('2025/01/01 09:00')
       expect(page).to have_content('投稿1')
+      expect(page).to have_content('2025/01/02 09:00')
+      expect(page).to have_content('投稿2')
     end
 
     it '投稿作成ページへのリンクが表示される' do
