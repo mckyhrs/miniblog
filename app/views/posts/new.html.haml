@@ -8,8 +8,8 @@
             - @post.errors.full_messages.each do |message|
               %li= message
 
-      = simple_form_for @post, class: 'mt-4' do |f|
-        = f.text_area :content, class: 'form-control mb-3', rows: 5
-        = f.submit t('posts.new_post'), class: 'btn btn-primary'
+      = simple_form_for @post do |f|
+        = f.input :content
+        = f.button :submit, t('posts.new_post')
 
       = link_to t('posts.back_to_index'), posts_path, class: 'btn btn-secondary mt-4'
