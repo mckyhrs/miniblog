@@ -1,0 +1,24 @@
+ja:
+  date:
+    formats:
+      default: '%Y/%m/%d'
+  time:
+    formats:
+      default: '%Y/%m/%d %H:%M'
+  general:
+    error_occurred: "エラーが発生しました"
+  activerecord:
+    attributes:
+      post:
+        content: "投稿内容"
+    errors:
+      messages:
+        blank: "を入力してください"
+      models:
+        post:
+          attributes:
+            content:
+              too_long: "は%{count}文字以内で入力してください"
+  posts:
+    new_post: "投稿する"
+    back_to_index: "タイムラインに戻る"

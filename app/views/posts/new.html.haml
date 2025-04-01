@@ -1,0 +1,15 @@
+.container.mt-4
+  .row.justify-content-center
+    .col-md-8
+      - if @post.errors.any?
+        .alert.alert-danger
+          %p= t('general.error_occurred')
+          %ul
+            - @post.errors.full_messages.each do |message|
+              %li= message
+
+      = simple_form_for @post do |f|
+        = f.input :content
+        = f.button :submit, t('posts.new_post')
+
+      = link_to t('posts.back_to_index'), posts_path, class: 'btn btn-secondary mt-4'
